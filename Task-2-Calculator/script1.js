@@ -17,19 +17,47 @@ function calculate() {
 
     try {
 
-        const expression = display.value;
+        let expression = display.value.trim();
 
-        if (expression.trim() === "") {
-            return;
+        if (expression === "") return;
+
+        let result;
+
+        
+        if (expression.includes("%")) {
+
+            let parts = expression.split("%");
+
+            if (
+                parts.length === 2 &&
+                !isNaN(parts[0]) &&
+                !isNaN(parts[1])
+            ) {
+
+                let percentage = Number(parts[0]);
+                let number = Number(parts[1]);
+
+                result = (percentage * number) / 100;
+
+            } else {
+
+                throw new Error("Invalid Percentage Expression");
+
+            }
+
+        } else {
+
+            result = eval(expression);
+
         }
 
-        const result = eval(expression);
-
+       
         const item = document.createElement("li");
         item.textContent = `${expression} = ${result}`;
 
         historyList.prepend(item);
 
+        
         display.value = result;
 
     } catch (error) {
@@ -46,6 +74,7 @@ function calculate() {
 function toggleTheme() {
     document.body.classList.toggle("dark-mode");
 }
+
 
 document.addEventListener("keydown", (e) => {
 
