@@ -47,8 +47,6 @@ function toggleTheme() {
     document.body.classList.toggle("dark-mode");
 }
 
-/* Keyboard Support */
-
 document.addEventListener("keydown", (e) => {
 
     if (
