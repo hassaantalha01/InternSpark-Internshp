@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karnataka Weather Prediction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <div class="container">
+        <h1>Karnataka Weather Prediction</h1>
+
+        <select id="districtSelect">
+            <option value="">Select District</option>
+            <option value="Bangalore">Bangalore Urban</option>
+            <option value="Mysore">Mysuru</option>
+            <option value="Mangalore">Dakshina Kannada</option>
+            <option value="Belgaum">Belagavi</option>
+            <option value="Hubli">Dharwad</option>
+            <option value="Shimoga">Shivamogga</option>
+            <option value="Tumkur">Tumakuru</option>
+            <option value="Raichur">Raichur</option>
+            <option value="Bidar">Bidar</option>
+            <option value="Gulbarga">Kalaburagi</option>
+            <option value="Hassan">Hassan</option>
+            <option value="Kodagu">Kodagu</option>
+            <option value="Chitradurga">Chitradurga</option>
+            <option value="Bellary">Ballari</option>
+        </select>
+
+        <button onclick="getWeather()">Check Weather</button>
+
+      <div class="weather-card" id="weatherCard">
+
+    <img id="icon" src="" alt="">
+
+    <h2 id="city"></h2>
+
+    <div class="info-box">
+        <p id="temp"></p>
+    </div>
+
+    <div class="info-box">
+        <p id="condition"></p>
+    </div>
+
+    <div class="info-box">
+        <p id="humidity"></p>
+    </div>
+
+    <div class="info-box">
+        <p id="wind"></p>
+    </div>
+
+</div>
+
+   <script src="script.js"></script>
+</body>
+</html>
