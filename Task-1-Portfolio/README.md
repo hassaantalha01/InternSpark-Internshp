@@ -30,4 +30,4 @@ This portfolio focuses on clean UI design, smooth user experience, responsive la
 
 ---
 
-## 📂 Project Structure
+## Author - Hassaan Talha
