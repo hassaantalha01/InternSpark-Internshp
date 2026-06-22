@@ -26,4 +26,4 @@ This project allows users to check real-time weather information by selecting a 
 
 ---
 
-## 📂 Project Structure
+## Author - Hassaan Talha
